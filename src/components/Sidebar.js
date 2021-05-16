@@ -1,11 +1,8 @@
-import React from 'react'
-import '../App';
-const Sidebar = () => {
-    return (
-        <div className="sidebar">
-            
-        </div>
-    )
-}
+import React from "react";
+import "../App";
 
-export default Sidebar
+const Sidebar = () => {
+	return <div className="sidebar"></div>;
+};
+
+export default Sidebar;

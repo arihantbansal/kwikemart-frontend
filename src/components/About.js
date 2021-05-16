@@ -1,12 +1,5 @@
-
-import '../App.css';
-
-function About() {
-  return (
-    <div className="">
-      
-    </div>
-  );
-}
+const About = () => {
+	return <div className=""></div>;
+};
 
 export default About;
