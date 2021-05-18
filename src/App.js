@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
 import Nav from "./components/Nav";
-import About from "./components/About";
+import ProductCard from "./components/ProductCard";
+import UserCard from "./components/UserCard";
 import Shop from "./components/Shop";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard";
@@ -17,7 +18,8 @@ function App() {
 					<Route path="/" exact component={Home} />
 					<Route path="/dashboard" exact component={Dashboard} />
 					<Route path="/login" component={Login} />
-					<Route path="/about" component={About} />
+					<Route path="/productcard" component={ProductCard} />
+					<Route path="/usercard" component={UserCard} />
 					<Route path="/shop" exact component={Shop} />
 					<Route path="/shop/:id" component={ItemDetail} />
 				</Switch>

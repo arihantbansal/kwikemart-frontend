@@ -1,7 +1,11 @@
+import ProductCard from "./ProductCard"
+import UserCard from "./UserCard"
+
 const DashboardContent = () => {
 	return (
 		<div className="dashboard-home">
-			<h3>Dashboard</h3>
+			{/* <ProductCard/> */}
+			<UserCard/>
 		</div>
 	);
 };

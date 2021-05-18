@@ -1,8 +1,12 @@
-import "../App";
+import "../App.css";
 import DashboardContent from "./DashboardContent";
-import Login from "./Login.js";
+
 import Nav from "./Nav";
+import ProductCard from "./ProductCard";
+import ProductCardH from "./ProductCardH";
+import UserCard from "./UserCard";
 import Sidebar from "./Sidebar";
+
 
 const Dashboard = () => {
 	return (
@@ -10,7 +14,13 @@ const Dashboard = () => {
 			<Nav />
 			<div className="dashhome">
 				<Sidebar />
-				<DashboardContent />
+				<div className="dash-content">
+					<ProductCard />
+					
+					<UserCard />
+					<ProductCardH/>
+				</div>
+				
 			</div>
 		</div>
 	);

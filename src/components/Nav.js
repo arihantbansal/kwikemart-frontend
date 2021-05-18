@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 const Nav = () => {
 	const navStyle = {
 		color: "white",
@@ -11,8 +12,8 @@ const Nav = () => {
 				<h3>INVENTORY AUDITOR</h3>
 			</Link>
 			<ul className="nav-links">
-				<Link style={navStyle} to="/about">
-					<li>About</li>
+				<Link style={navStyle} to="/productcard">
+					<li>Card</li>
 				</Link>
 				<Link style={navStyle} to="/shop">
 					<li>Shop</li>
