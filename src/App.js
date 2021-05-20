@@ -10,6 +10,10 @@ import ItemDetail from "./components/ItemDetail";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+
+
+
+
 function App() {
 	return (
 		<Router>
@@ -40,6 +44,7 @@ const Home = () => {
 					<h2>Inventory</h2>
 					<h2>Manager</h2>
 				</div>
+				
 				<div className="home-login">
 					<h3>Sign In to avail services</h3>
 					<Link to="/login">

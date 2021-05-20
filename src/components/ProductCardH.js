@@ -24,14 +24,14 @@ const ProductCardH = () => {
                         </div>
                         <div className="hstockcontent">
                             <button className="hplus" >
-                                <FaPlus size={10}/>
+                                <FaPlus size={20}/>
                             </button>
                             <h4>1</h4>
                             <button className="hminus">
-                                <FaMinus size={10}/>
+                                <FaMinus size={20}/>
                             </button>
                             <button className="hTrash">
-                                <FaTrashAlt size={10}/>
+                                <FaTrashAlt size={20}/>
                             </button>
                         </div>
                     </div> 

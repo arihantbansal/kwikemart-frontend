@@ -11,14 +11,18 @@ import Sidebar from "./Sidebar";
 const Dashboard = () => {
 	return (
 		<div className="landing-screen3">
-			<Nav />
+			<div className="navd"><Nav /></div>
 			<div className="dashhome">
 				<Sidebar />
 				<div className="dash-content">
-					<ProductCard />
 					
-					<UserCard />
-					<ProductCardH/>
+				 <ProductCardH/>
+				 <ProductCardH/>
+				 <ProductCardH/>
+				 <ProductCardH/>
+				 <ProductCard />
+				 <UserCard />
+					
 				</div>
 				
 			</div>

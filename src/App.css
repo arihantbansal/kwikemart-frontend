@@ -27,15 +27,15 @@ code {
 nav {
 	display: flex;
 	align-items: center;
-	position:fixed;
-	width:100%;
+	z-index: 10;
+	width:100vw;
 	justify-content: space-between;
-	background-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 1);
 	padding-left: 10px;
 	list-style: none;
 	text-decoration: none;
 	color: #fff;
-	background-color: rgba(0, 0, 0, 0.2);
+	
 }
 
 nav a {
@@ -209,6 +209,10 @@ nav h3 {
 /************************/
 /*      Dashboard       */
 /************************/
+.landing-screen3{
+	display: flex;
+	flex-direction: column;
+}
 .dashb {
 	height: 90vh;
 	width: 100vw;
@@ -217,17 +221,16 @@ nav h3 {
 	flex-direction: column;
 }
 
-.sidebar {
-	height: 100vmax;
-	left: 0;
-	width: 20%;
-	min-width: 250px;
-	background-color: rgba(0, 0, 0, 0.4);
-}
+
 
 /************************/
 /*  Dashboard Content   */
 /************************/
+.navd{
+	position:fixed;
+	z-index: 90;
+}
+
 .dashboard-home {
 	right: 0;
 	display: flex;
@@ -250,6 +253,8 @@ nav h3 {
 .dashhome {
 	display: flex;
 	flex-direction: row;
+	margin-top: 80px;
+	position:static
 }
 
 
@@ -349,6 +354,7 @@ nav h3 {
 	flex-direction: column;
 	background-color: #fff;
 	width: 100%;
+	margin-left:300px;
 }
 
 
@@ -412,17 +418,21 @@ nav h3 {
 .hcard{
 	display:flex;
 	flex-direction:column;
-	background-color: black;
-	
-	width:70%;
+	background-color: rgb(255, 255, 255);
+	color:black;
+	width:60%;
 	box-sizing: border-box;
-	margin:20px;
+	border:gray solid 1px;
+	box-shadow: 8px 8px #888888b6;
+	margin:60px;
+	text-align: left;
+	padding-left: 10px;
 }
 
 .restcardcontent{
-	background-color: royalblue;
-	color:black;
-	
+	background-color: white;
+	color:gray;
+	border-top: gray solid 1px;
 	display:flex;
 	box-sizing: border-box;
 	flex-direction:row;
@@ -433,21 +443,22 @@ nav h3 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
-	border:solid black 5px;
+	color:black;
+	border-right:solid gray 1px;
 	
 }
 .detailcontent{
-	border:solid black 5px;
+	
 	width:80%;
 	display:flex;
 	flex-direction:column;
 	box-sizing: border-box;
-	padding-left: 8px;
+	
+	font-weight: 500;
 }
 .hpdetails{
-	line-height: 10px;
-	
+	line-height: 8px;
+	padding-left: 8px;
 	height:75%;
 }
 .hstock{
@@ -458,7 +469,7 @@ nav h3 {
 	justify-content: space-between;
 	align-content: center;
 	padding:10px 0;
-	background-color: royalblue;
+	background-color: gray;
 	
 	
 }
@@ -476,12 +487,17 @@ nav h3 {
 	align-items: center;
 	flex-direction:row;
 	width:30%;
+	color:white;
 	justify-content: space-around;
 	
 }
 .hstocktitle {
-	padding:5px 0;
+	padding:5px 0 5px 5px;
 	display: flex;
 	align-items: center;
+	color:white;
 	
+}
+.hTrash{
+	margin-left: 20px;
 }
