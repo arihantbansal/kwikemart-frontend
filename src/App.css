@@ -128,7 +128,7 @@ nav h3 {
 	text-align: left;
 
 	font-size: 3.5rem;
-	padding-left: 10px;
+	margin-left: 20px;
 	color: #fff;
 	line-height: 19px;
 	word-spacing: 2px;
@@ -493,4 +493,8 @@ nav h3 {
 
 .hTrash {
 	margin-left: 20px;
+}
+
+.justify-content-center {
+	text-align: center !important;
 }

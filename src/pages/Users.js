@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Nav from "../components/Nav";
+import Nav from "components/Nav";
 // import ProductCardH from "../components/ProductCardH";
-import Sidebar from "../components/Sidebar";
-import UserCard from "../components/UserCard";
-import userService from "../services/users";
+import Sidebar from "components/Sidebar";
+import UserCard from "components/UserCard";
+import userService from "services/users";
 
 const Users = ({ category }) => {
 	const [users, setUsers] = useState([]);

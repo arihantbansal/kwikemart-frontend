@@ -14,10 +14,24 @@ const LandingPage = () => {
 				</div>
 
 				<div className="home-login">
-					<h3>Sign In to avail services</h3>
-					<Link to="/login">
-						<h2>Login</h2>
-					</Link>
+					<h3>Login To Our Portal</h3>
+					<form className="login-form">
+						<input
+							type="text"
+							placeholder="admin"
+							name="username"
+							className="login-e"
+						/>
+						<input
+							type="password"
+							placeholder="password"
+							name="password"
+							className="login-p"
+						/>
+						<Link to="/dashboard">
+							<button className="login-b">Login</button>
+						</Link>
+					</form>
 				</div>
 			</div>
 		</div>

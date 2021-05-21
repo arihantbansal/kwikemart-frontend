@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Nav from "../components/Nav";
-import ProductCardH from "../components/ProductCardH";
-import Sidebar from "../components/Sidebar";
-import productService from "../services/products";
+import Nav from "components/Nav";
+import ProductCardH from "components/ProductCardH";
+import Sidebar from "components/Sidebar";
+import productService from "services/products";
 
 const Products = ({ category }) => {
 	const [products, setProducts] = useState([]);

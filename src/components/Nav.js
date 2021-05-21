@@ -7,18 +7,10 @@ const Nav = () => {
 	};
 
 	return (
-		<nav>
+		<nav class="justify-content-center">
 			<Link to="/">
-				<h3>INVENTORY AUDITOR</h3>
+				<h3>Kwik-E-Mart</h3>
 			</Link>
-			<ul className="nav-links">
-				<Link style={navStyle} to="/productcard">
-					<li>Card</li>
-				</Link>
-				<Link style={navStyle} to="/shop">
-					<li>Shop</li>
-				</Link>
-			</ul>
 		</nav>
 	);
 };
