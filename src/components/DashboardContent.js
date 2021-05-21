@@ -1,11 +1,12 @@
-import ProductCard from "./ProductCard"
-import UserCard from "./UserCard"
+import React from "react";
+import ProductCard from "./ProductCard";
+import UserCard from "./UserCard";
 
 const DashboardContent = () => {
 	return (
 		<div className="dashboard-home">
 			{/* <ProductCard/> */}
-			<UserCard/>
+			<UserCard />
 		</div>
 	);
 };

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@500&family=Goblin+One&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Montserrat:wght@500&family=Raleway:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@700&family=Montserrat:wght@500&family=Raleway:wght@600&display=swap");
 
 body {
 	margin: 0;
@@ -8,8 +8,14 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	padding: 0;
 	box-sizing: border-box;
-	background: rgb(0,0,0);
-	background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgba(10,10,10,1) 7%, rgb(139, 1, 212) 84%, rgb(164, 3, 252) 100%);		
+	background: rgb(0, 0, 0);
+	background: linear-gradient(
+		90deg,
+		rgba(0, 0, 0, 1) 1%,
+		rgba(10, 10, 10, 1) 7%,
+		rgb(139, 1, 212) 84%,
+		rgb(164, 3, 252) 100%
+	);
 	color: #007aec;
 }
 
@@ -28,14 +34,13 @@ nav {
 	display: flex;
 	align-items: center;
 	z-index: 10;
-	width:100vw;
+	width: 100vw;
 	justify-content: space-between;
 	background-color: rgba(0, 0, 0, 1);
 	padding-left: 10px;
 	list-style: none;
 	text-decoration: none;
 	color: #fff;
-	
 }
 
 nav a {
@@ -47,7 +52,7 @@ nav a h3 {
 	text-decoration: none;
 	list-style: none;
 	margin-right: 20px;
-	font-family: "Raleway","Goblin One", cursive;
+	font-family: "Raleway", "Goblin One", cursive;
 }
 
 nav h3 {
@@ -119,9 +124,9 @@ nav h3 {
 }
 
 .home-tagline h2 {
-	font-family:"Montserrat","Goblin One", cursive;
+	font-family: "Montserrat", "Goblin One", cursive;
 	text-align: left;
-	
+
 	font-size: 3.5rem;
 	padding-left: 10px;
 	color: #fff;
@@ -135,14 +140,14 @@ nav h3 {
 	border: 2px outset #fff;
 	background-color: rgba(0, 0, 0, 0);
 	width: 250px;
-	height: 200px;	
+	height: 200px;
 }
 .home-login h3 {
 	margin-bottom: 10%;
 	background-color: rgba(0, 136, 255, 0);
 	max-width: 300px;
 	font-weight: 50;
-	color:#fff;
+	color: #fff;
 }
 
 .home-login h2 {
@@ -158,7 +163,7 @@ nav h3 {
 }
 
 .home-login h2:hover {
-	color: rgba(0,0,0,1);
+	color: rgba(0, 0, 0, 1);
 	background-color: #fff;
 	transition: 0.5s;
 }
@@ -209,7 +214,7 @@ nav h3 {
 /************************/
 /*      Dashboard       */
 /************************/
-.landing-screen3{
+.landing-screen3 {
 	display: flex;
 	flex-direction: column;
 }
@@ -221,13 +226,11 @@ nav h3 {
 	flex-direction: column;
 }
 
-
-
 /************************/
 /*  Dashboard Content   */
 /************************/
-.navd{
-	position:fixed;
+.navd {
+	position: fixed;
 	z-index: 90;
 }
 
@@ -254,250 +257,240 @@ nav h3 {
 	display: flex;
 	flex-direction: row;
 	margin-top: 80px;
-	position:static
+	position: static;
 }
-
 
 /************************/
 /*     Product Card     */
 /************************/
-.card{
-    
-    margin:10px;
-    width: 278px;
-    height: 290px;
+.card {
+	margin: 10px;
+	width: 278px;
+	height: 290px;
 	background: #000000;
 	font-size: 400;
-	padding:10px;
-	display:flex;
-	flex-direction: column;
-	font-family: 'Quicksand', sans-serif;
-	margin-top:90px;
-}
-.ptitle{
-	margin:0;
-	background-color: #4169e1;
-	min-height: 30%;
-	width:100%;
-	color: white;
-}
-.pdetails{
-	text-align: left;
-	color: #4169e1;
-	padding:10px  0 0 10px;
-	line-height: 4px;
-	width:100%;
-	min-height: 30%;
-	
-}
-
-.stock{
-	
+	padding: 10px;
 	display: flex;
 	flex-direction: column;
-	height:max-content;
+	font-family: "Quicksand", sans-serif;
+	margin-top: 90px;
+}
+.ptitle {
+	margin: 0;
+	background-color: #4169e1;
+	min-height: 30%;
+	width: 100%;
+	color: white;
+}
+.pdetails {
+	text-align: left;
+	color: #4169e1;
+	padding: 10px 0 0 10px;
+	line-height: 4px;
+	width: 100%;
+	min-height: 30%;
+}
+
+.stock {
+	display: flex;
+	flex-direction: column;
+	height: max-content;
 	font-size: 300;
 	background-color: #4169e1;
 	color: white;
-	width:100%;
-	margin:auto 0 0 0;
+	width: 100%;
+	margin: auto 0 0 0;
 	padding: 3px 0px;
-	bottom:0%
+	bottom: 0%;
 }
 
-.stocktitle h4{
-	margin:0;
-	height:30px;
+.stocktitle h4 {
+	margin: 0;
+	height: 30px;
 	line-height: 25px;
-	
 }
 .stockcontent {
 	display: flex;
 	flex-direction: row;
-	height:30px;
-	margin:2px;
-
+	height: 30px;
+	margin: 2px;
 }
-.stock .stockcontent h4{
+.stock .stockcontent h4 {
 	border: 2px #ffffff solid;
-	margin: 0 5px ;
-	padding:0 38px;
+	margin: 0 5px;
+	padding: 0 38px;
 	width: 100px;
-	height: 25px;;
+	height: 25px;
 	line-height: 25px;
-
 }
 
 .stock button {
 	background-color: rgb(255, 255, 255);
-	color:#4169e1;
+	color: #4169e1;
 	height: 100%;
 	width: 20%;
-	margin:0px;
-	border:2px solid black;
+	margin: 0px;
+	border: 2px solid black;
 }
-.plus :hover{
+.plus :hover {
 	transform: scale(1.2);
-}	
-.minus :hover{
+}
+.minus :hover {
 	transform: scale(1.2);
-}	
-.stock.plus{
-	margin:0 0 0 0 ;
+}
+.stock.plus {
+	margin: 0 0 0 0;
 }
 
-
-
-
-.dash-content{
+.dash-content {
 	display: flex;
 	flex-direction: column;
 	background-color: #fff;
 	width: 100%;
-	margin-left:300px;
+	margin-left: 300px;
 }
-
 
 /* ********User Card ********** */
-.ucard{
+.ucard {
 	background-color: #4169e1;
 	color: #fff;
-	height:305px;
-	width:290px;
+	height: 305px;
+	width: 290px;
 	box-sizing: border-box;
-	margin:10px;
-	margin-top:90px;
+	margin: 10px;
+	margin-top: 90px;
 	display: flex;
 	flex-direction: column;
-	padding:10px;
-	
+	padding: 10px;
 }
-.userimage{
+
+.userimage {
 	color: rgb(255, 255, 255);
-	background-color:black;
+	background-color: black;
 	padding-top: 5px;
 	border: 1px black solid;
 	margin-bottom: 5px;
 }
-.userdetails{
-	background-color:white;
-	color:black;
+
+.userdetails {
+	background-color: white;
+	color: black;
 	text-align: start;
-	padding:4px;
+	padding: 4px;
 	line-height: 10px;
 	border: 1px black solid;
 	margin-bottom: 5px;
-	
 }
-.usercontrol{
+
+.usercontrol {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	height:50px;
+	height: 50px;
 	align-content: baseline;
-	padding-top:10px;
+	padding-top: 10px;
 	transition: 3s;
 	transition-duration: 0.4s;
 	border: 1px black solid;
 	font-size: 1em;
-	
-}
-.usercontrol *{
-	margin: 0;
-}
-.usercontrol:hover{
-	color:white;
-	background-color: rgba(202, 21, 21, 0.945);
-	
 }
 
+.usercontrol * {
+	margin: 0;
+}
+
+.usercontrol:hover {
+	color: white;
+	background-color: rgba(202, 21, 21, 0.945);
+}
 
 /* Product Card Horizontal */
 
-
-.hcard{
-	display:flex;
-	flex-direction:column;
+.hcard {
+	display: flex;
+	flex-direction: column;
 	background-color: rgb(255, 255, 255);
-	color:black;
-	width:60%;
+	color: black;
+	width: 60%;
 	box-sizing: border-box;
-	border:gray solid 1px;
+	border: gray solid 1px;
 	box-shadow: 8px 8px #888888b6;
-	margin:60px;
+	margin: 60px;
 	text-align: left;
 	padding-left: 10px;
 }
 
-.restcardcontent{
+.restcardcontent {
 	background-color: white;
-	color:gray;
+	color: gray;
 	border-top: gray solid 1px;
-	display:flex;
+	display: flex;
 	box-sizing: border-box;
-	flex-direction:row;
+	flex-direction: row;
 	text-align: left;
 }
-.categoryimage{
-	width:20%;
+
+.categoryimage {
+	width: 20%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color:black;
-	border-right:solid gray 1px;
-	
+	color: black;
+	border-right: solid gray 1px;
 }
-.detailcontent{
-	
-	width:80%;
-	display:flex;
-	flex-direction:column;
+
+.detailcontent {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
 	box-sizing: border-box;
-	
+
 	font-weight: 500;
 }
-.hpdetails{
+
+.hpdetails {
 	line-height: 8px;
 	padding-left: 8px;
-	height:75%;
+	height: 75%;
 }
-.hstock{
-	display:flex;
-	flex-direction:row;
-	width:100%;
-	height:25%;
+
+.hstock {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 25%;
 	justify-content: space-between;
 	align-content: center;
-	padding:10px 0;
+	padding: 10px 0;
 	background-color: gray;
-	
-	
 }
-.hstock button{
-	height:30px;
+
+.hstock button {
+	height: 30px;
 	padding-bottom: 0;
 	margin-bottom: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.hstockcontent{
-	display:flex;
+
+.hstockcontent {
+	display: flex;
 	display: flex;
 	align-items: center;
-	flex-direction:row;
-	width:30%;
-	color:white;
+	flex-direction: row;
+	width: 30%;
+	color: white;
 	justify-content: space-around;
-	
 }
+
 .hstocktitle {
-	padding:5px 0 5px 5px;
+	padding: 5px 0 5px 5px;
 	display: flex;
 	align-items: center;
-	color:white;
-	
+	color: white;
 }
-.hTrash{
+
+.hTrash {
 	margin-left: 20px;
 }

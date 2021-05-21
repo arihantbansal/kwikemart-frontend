@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-
 function Item({ match }) {
 	useEffect(() => {
 		console.log(match);
