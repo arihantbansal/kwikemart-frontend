@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Item({ match }) {
+const Item = ({ match }) => {
 	useEffect(() => {
 		console.log(match);
 		fetchItem();
@@ -27,6 +27,6 @@ function Item({ match }) {
 			<h4>{item.description}</h4>
 		</div>
 	);
-}
+};
 
 export default Item;

@@ -2,6 +2,7 @@ import React from "react";
 import "../App";
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
 	return (
@@ -12,7 +13,7 @@ const Sidebar = () => {
 
 					<SubMenu style={{ width: "300px" }} title="Categories">
 						<MenuItem style={{ width: "300px" }}>
-							Electronics
+							<Link to="/products">Electronics</Link>
 						</MenuItem>
 						<MenuItem style={{ width: "300px" }}>
 							Home Appliances
