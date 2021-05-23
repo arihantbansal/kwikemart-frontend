@@ -11,7 +11,15 @@ const UserCard = ({ user }) => {
 			<div className="userdetails">
 				<h3>Name - {user.name} </h3>
 				<h5>Username - {user.username}</h5>
-				<h5>Role - {user.role}</h5>
+				<h5>
+					Role -{" "}
+					{user.role
+						.split(" ")
+						.map(
+							w => w[0].toUpperCase() + w.substr(1).toLowerCase()
+						)
+						.join(" ")}
+				</h5>
 			</div>
 			<button className="usercontrol">
 				<h4>Delete User</h4>

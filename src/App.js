@@ -99,14 +99,14 @@ const App = () => {
 				/>
 				<ProtectedRoute
 					exact
-					path="/products"
+					path="/products/:category"
 					user={user}
 					handleLogout={handleLogout}
 					component={Products}
 				/>
 				<ProtectedRoute
 					exact
-					path="/users"
+					path="/users/:role"
 					user={user}
 					handleLogout={handleLogout}
 					component={Users}

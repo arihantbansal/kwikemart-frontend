@@ -8,28 +8,42 @@ const Sidebar = () => {
 		<div className="sidebar">
 			<ProSidebar style={{ width: "300px", position: "fixed" }}>
 				<Menu iconShape="square">
-					<MenuItem style={{ width: "300px" }}>Dashboard</MenuItem>
+					<MenuItem style={{ width: "300px" }}>
+						<Link to="/dashboard">Dashboard</Link>
+					</MenuItem>
 					<SubMenu style={{ width: "300px" }} title="Categories">
 						<MenuItem style={{ width: "300px" }}>
-							<Link to="/products">Electronics</Link>
+							<Link to="/products/all">All</Link>
 						</MenuItem>
 						<MenuItem style={{ width: "300px" }}>
-							Home Appliances
+							<Link to="/products/electronics">Electronics</Link>
 						</MenuItem>
-						<MenuItem style={{ width: "300px" }}>Clothes</MenuItem>
-						<MenuItem style={{ width: "300px" }}>Grocery</MenuItem>
-						<MenuItem style={{ width: "300px" }}>Kids</MenuItem>
+						<MenuItem style={{ width: "300px" }}>
+							<Link to="/products/fashion">Fashion</Link>
+						</MenuItem>
+						<MenuItem style={{ width: "300px" }}>
+							<Link to="/products/grocery">Grocery</Link>
+						</MenuItem>
+						<MenuItem style={{ width: "300px" }}>
+							<Link to="/products/books">Books</Link>
+						</MenuItem>
 					</SubMenu>
 					<SubMenu
 						style={{ width: "300px", transition: "2s" }}
 						title="Users">
-						<MenuItem style={{ width: "300px" }}>Admin</MenuItem>
-						<MenuItem style={{ width: "300px" }}>Cashier</MenuItem>
-						<MenuItem style={{ width: "300px" }}>Staff</MenuItem>
+						<MenuItem style={{ width: "300px" }}>
+							<Link to="/users/all">All</Link>
+						</MenuItem>
+						<MenuItem style={{ width: "300px" }}>
+							<Link to="/users/admin">Admin</Link>
+						</MenuItem>
+						<MenuItem style={{ width: "300px" }}>
+							<Link to="/users/cashier">Cashier</Link>
+						</MenuItem>
+						<MenuItem style={{ width: "300px" }}>
+							<Link to="/users/staff">Staff</Link>
+						</MenuItem>
 					</SubMenu>
-					{/* <MenuItem style={{ width: "300px" }}>
-						<button onClick={() => handleLogout()}>Log Out</button>
-					</MenuItem> */}
 				</Menu>
 			</ProSidebar>
 		</div>
