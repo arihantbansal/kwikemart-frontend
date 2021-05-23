@@ -12,14 +12,14 @@ const Nav = ({ handleLogout }) => {
 				<h3>Kwik-E-Mart</h3>
 			</Link>
 
-			{/* <ul className="nav-links">
+			<ul className="nav-links">
 				<Link style={navStyle} to="/about">
 					<li>About</li>
 				</Link>
 				<li>
 					<button onClick={handleLogout}>Logout</button>
 				</li>
-			</ul> */}
+			</ul>
 		</nav>
 	);
 };

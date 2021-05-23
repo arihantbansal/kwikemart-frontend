@@ -9,7 +9,7 @@ import Unauthorized from "pages/Unauthorized";
 import loginService from "services/login";
 import productService from "services/products";
 import userService from "services/users";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 
 const App = () => {
 	const [user, setUser] = useState(null);
@@ -29,6 +29,8 @@ const App = () => {
 		}
 	}, []);
 
+	const history = useHistory();
+
 	const handleLogin = async event => {
 		event.preventDefault();
 
@@ -44,6 +46,7 @@ const App = () => {
 			setUser(user);
 			setUsername("");
 			setPassword("");
+			history.push("/dashboard");
 		} catch (exception) {
 			console.log(exception);
 			setNotificationMessage("Wrong credentials");
@@ -64,58 +67,53 @@ const App = () => {
 		setUser(null);
 		setUsername("");
 		setPassword("");
+		history.push("/");
 	};
 
 	return (
-		<Router>
-			<div className="App">
-				<Switch>
-					<Route
-						exact
-						path="/"
-						exact
-						handleLogin={handleLogin}
-						render={props => (
-							<LandingPage
-								{...props}
-								user={user}
-								handleLogin={handleLogin}
-								setUsername={setUsername}
-								setPassword={setPassword}
-								username={username}
-								password={password}
-							/>
-						)}
-					/>
-					<ProtectedRoute
-						exact
-						path="/dashboard"
-						user={user}
-						handleLogout={handleLogout}
-						component={Dashboard}
-					/>
-					<ProtectedRoute
-						exact
-						path="/products"
-						user={user}
-						handleLogout={handleLogout}
-						component={Products}
-					/>
-					<ProtectedRoute
-						exact
-						path="/users"
-						user={user}
-						handleLogout={handleLogout}
-						component={Users}
-					/>
-					<Route
-						exact
-						path="/unauthorized"
-						component={Unauthorized}
-					/>
-				</Switch>
-			</div>
-		</Router>
+		<div className="App">
+			<Switch>
+				<Route
+					exact
+					path="/"
+					exact
+					handleLogin={handleLogin}
+					render={props => (
+						<LandingPage
+							{...props}
+							user={user}
+							handleLogin={handleLogin}
+							setUsername={setUsername}
+							setPassword={setPassword}
+							username={username}
+							password={password}
+						/>
+					)}
+				/>
+				<ProtectedRoute
+					exact
+					path="/dashboard"
+					user={user}
+					handleLogout={handleLogout}
+					component={Dashboard}
+				/>
+				<ProtectedRoute
+					exact
+					path="/products"
+					user={user}
+					handleLogout={handleLogout}
+					component={Products}
+				/>
+				<ProtectedRoute
+					exact
+					path="/users"
+					user={user}
+					handleLogout={handleLogout}
+					component={Users}
+				/>
+				<Route exact path="/unauthorized" component={Unauthorized} />
+			</Switch>
+		</div>
 	);
 };
 
