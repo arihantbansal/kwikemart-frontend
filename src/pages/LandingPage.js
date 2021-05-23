@@ -1,7 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router";
 
-const LandingPage = () => {
+const LandingPage = props => {
+	if (props.user) {
+		return <Redirect to="/dashboard" />;
+	}
+
 	return (
 		<div className="landing-screen1">
 			<div className="home-content">
@@ -15,22 +19,35 @@ const LandingPage = () => {
 
 				<div className="home-login">
 					<h3>Login To Our Portal</h3>
-					<form className="login-form">
-						<input
-							type="text"
-							placeholder="admin"
-							name="username"
-							className="login-e"
-						/>
-						<input
-							type="password"
-							placeholder="password"
-							name="password"
-							className="login-p"
-						/>
-						<Link to="/dashboard">
-							<button className="login-b">Login</button>
-						</Link>
+					<p>
+						Logged in status: {Boolean(props.user) ? "Yes" : "No"}
+					</p>
+					<form className="login-form" onSubmit={props.handleLogin}>
+						<div className="login-e">
+							Username: &emsp;
+							<input
+								type="text"
+								name="username"
+								value={props.username}
+								onChange={({ target }) =>
+									props.setUsername(target.value)
+								}
+							/>
+						</div>
+						<div className="login-p">
+							Password:
+							<input
+								type="password"
+								name="password"
+								value={props.password}
+								onChange={({ target }) =>
+									props.setPassword(target.value)
+								}
+							/>
+						</div>
+						<button type="submit" className="login-b">
+							Login
+						</button>
 					</form>
 				</div>
 			</div>

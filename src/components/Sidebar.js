@@ -3,7 +3,7 @@ import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ handleLogout }) => {
 	return (
 		<div className="sidebar">
 			<ProSidebar style={{ width: "300px", position: "fixed" }}>
@@ -28,7 +28,11 @@ const Sidebar = () => {
 						<MenuItem style={{ width: "300px" }}>Cashier</MenuItem>
 						<MenuItem style={{ width: "300px" }}>Staff</MenuItem>
 					</SubMenu>
-					<MenuItem style={{ width: "300px" }}>Log Out</MenuItem>
+					<MenuItem style={{ width: "300px" }}>
+						<Link to="/">
+							<button onClick={handleLogout}>Log Out</button>
+						</Link>
+					</MenuItem>
 				</Menu>
 			</ProSidebar>
 		</div>

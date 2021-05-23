@@ -1,6 +1,12 @@
 import axios from "axios";
 const baseUrl = "/api/users";
 
+let token = null;
+
+const setToken = newToken => {
+	token = `bearer ${newToken}`;
+};
+
 const getAll = async () => {
 	const response = await axios.get(baseUrl);
 	return response.data;
@@ -29,4 +35,4 @@ const removeUser = async id => {
 	return response.data;
 };
 
-export default { getAll, create, update, removeUser };
+export default { getAll, create, update, removeUser, setToken };
