@@ -48,18 +48,22 @@ const Products = props => {
 			<div className="dashhome">
 				<Sidebar />
 				<div className="dash-content">
-					Category:{" "}
-					{category[0].toUpperCase() +
-						category.substr(1).toLowerCase()}
-					{productsToShow
-						.sort((a, b) => a.name.localeCompare(b.name))
-						.map(product => (
-							<ProductCardH
-								key={product.id}
-								product={product}
-								deleteProduct={deleteProduct}
-							/>
-						))}
+					<div className="category">
+						Category:{" "}
+						{category[0].toUpperCase() +
+							category.substr(1).toLowerCase()}
+					</div>
+					<div className="products">
+						{productsToShow
+							.sort((a, b) => a.name.localeCompare(b.name))
+							.map(product => (
+								<ProductCardH
+									key={product.id}
+									product={product}
+									deleteProduct={deleteProduct}
+								/>
+							))}
+					</div>
 				</div>
 			</div>
 		</div>

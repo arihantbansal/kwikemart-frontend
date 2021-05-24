@@ -748,7 +748,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	height: 100vh;
-	margin-top: 60px;
+	margin-top: 10vh;
 }
 
 /************************/
@@ -847,8 +847,23 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: #fff;
-	width: 100%;
+	width: calc(100vw - 300px);
 	margin-left: 300px;
+	margin-top: 10px;
+}
+
+.dash-content .category,
+.dash-content .role {
+	font-size: 1.5rem;
+	text-decoration: underline;
+}
+
+.products,
+.users {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 /* ********User Card ********** */
@@ -859,8 +874,8 @@ body {
 	height: 305px;
 	width: 290px;
 	box-sizing: border-box;
-	margin: 10px;
-	margin-top: 90px;
+	margin: 5px;
+	margin-top: 5vh;
 	display: flex;
 	flex-direction: column;
 	padding: 10px;
@@ -889,7 +904,7 @@ body {
 	flex-direction: row;
 	justify-content: space-between;
 	height: 50px;
-	align-content: baseline;
+	align-content: center;
 	padding-top: 10px;
 	transition: 3s;
 	transition-duration: 0.4s;
@@ -898,12 +913,13 @@ body {
 }
 
 .usercontrol * {
+	text-align: center;
 	margin: 0;
 }
 
 .usercontrol:hover {
 	color: white;
-	background-color: rgba(202, 21, 21, 0.945);
+	background-color: rgba(202, 21, 21, 0.845);
 }
 
 /* Product Card Horizontal */
@@ -917,7 +933,7 @@ body {
 	box-sizing: border-box;
 	border: gray solid 1px;
 	box-shadow: 8px 8px #888888b6;
-	margin: 60px;
+	margin: 5vh;
 	text-align: left;
 	padding-left: 10px;
 }
@@ -949,10 +965,16 @@ body {
 	font-weight: 500;
 }
 
+.hptitle {
+	font-size: 1.2rem;
+	text-align: center;
+}
+
 .hpdetails {
-	line-height: 8px;
+	line-height: 14px;
 	padding-left: 8px;
 	height: 75%;
+	padding: 10px;
 }
 
 .hstock {
@@ -974,6 +996,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-left: 5px;
 }
 
 .hstockcontent {
@@ -983,6 +1006,7 @@ body {
 	flex-direction: row;
 	width: 30%;
 	color: white;
+	/* padding: 10px; */
 }
 
 .hstockcontent h4 {

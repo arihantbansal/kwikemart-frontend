@@ -46,17 +46,21 @@ const Users = props => {
 			<div className="dashhome">
 				<Sidebar />
 				<div className="dash-content">
-					User Role :{" "}
-					{role[0].toUpperCase() + role.substr(1).toLowerCase()}
-					{usersToShow
-						.sort((a, b) => a.name.localeCompare(b.name))
-						.map(user => (
-							<UserCard
-								key={user.id}
-								user={user}
-								deleteUser={deleteUser}
-							/>
-						))}
+					<div className="role">
+						User Role :{" "}
+						{role[0].toUpperCase() + role.substr(1).toLowerCase()}
+					</div>
+					<div className="users">
+						{usersToShow
+							.sort((a, b) => a.name.localeCompare(b.name))
+							.map(user => (
+								<UserCard
+									key={user.id}
+									user={user}
+									deleteUser={deleteUser}
+								/>
+							))}
+					</div>
 				</div>
 			</div>
 		</div>
