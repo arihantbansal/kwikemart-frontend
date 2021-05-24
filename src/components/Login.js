@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Login() {
+const Login = () => {
 	return (
 		<div className="landing-screen2">
 			<div className="home-content">
@@ -35,6 +35,6 @@ function Login() {
 			</div>
 		</div>
 	);
-}
+};
 
 export default Login;

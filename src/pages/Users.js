@@ -23,6 +23,21 @@ const Users = props => {
 		});
 	}, [users]);
 
+	const deleteUser = async id => {
+		try {
+			const user = users.filter(u => u.id === id);
+
+			if (window.confirm(`Remove user ${user.name} ?`)) {
+				await userService.removeUser(id);
+
+				setUsers(users.filter(u => u.id !== id));
+				setUsersToShow(usersToShow.filter(u => u.id !== id));
+			}
+		} catch (exception) {
+			console.error(exception);
+		}
+	};
+
 	return (
 		<div className="landing-screen3">
 			<div className="navd">
@@ -36,7 +51,11 @@ const Users = props => {
 					{usersToShow
 						.sort((a, b) => a.name.localeCompare(b.name))
 						.map(user => (
-							<UserCard key={user.id} user={user} />
+							<UserCard
+								key={user.id}
+								user={user}
+								deleteUser={deleteUser}
+							/>
 						))}
 				</div>
 			</div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router";
-import { Link } from "react-router-dom";
+import { FaAngleDoubleDown } from "react-icons/fa";
+import AboutUs from "components/AboutUs";
 
 const LandingPage = props => {
 	if (props.user) {
@@ -20,12 +21,9 @@ const LandingPage = props => {
 
 				<div className="home-login">
 					<h3>Login To Our Portal</h3>
-					<p>
-						Logged in status: {Boolean(props.user) ? "Yes" : "No"}
-					</p>
 					<form className="login-form" onSubmit={props.handleLogin}>
-						<div className="login-e">
-							Username: &emsp;
+						<div className="login-input">
+							Username:
 							<input
 								type="text"
 								name="username"
@@ -35,7 +33,7 @@ const LandingPage = props => {
 								}
 							/>
 						</div>
-						<div className="login-p">
+						<div className="login-input">
 							Password:
 							<input
 								type="password"
@@ -46,12 +44,21 @@ const LandingPage = props => {
 								}
 							/>
 						</div>
-						<button type="submit" className="login-b">
+						<button type="submit" className="login-btn">
 							Login
 						</button>
 					</form>
 				</div>
 			</div>
+			<div>
+				<a href="#about">
+					<button className="exploredown">
+						<FaAngleDoubleDown size={50} />
+					</button>
+				</a>
+			</div>
+
+			<AboutUs />
 		</div>
 	);
 };

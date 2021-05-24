@@ -2,18 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Nav = ({ handleLogout }) => {
-	const navStyle = {
-		color: "white",
-	};
-
 	return (
-		<nav className="justify-content-center">
+		<nav className="navbar">
 			<Link to="/">
 				<h3>Kwik-E-Mart</h3>
 			</Link>
 
 			<ul className="nav-links">
-				<Link style={navStyle} to="/about">
+				<Link to="/about">
 					<li>About</li>
 				</Link>
 				<li>

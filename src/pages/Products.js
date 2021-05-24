@@ -25,6 +25,21 @@ const Products = props => {
 		});
 	}, [products]);
 
+	const deleteProduct = async id => {
+		try {
+			const product = products.filter(p => p.id === id);
+
+			if (window.confirm(`Remove product ${product.name} ?`)) {
+				await productService.removeProduct(id);
+
+				setProducts(products.filter(p => p.id !== id));
+				setProductsToShow(productsToShow.filter(p => p.id !== id));
+			}
+		} catch (exception) {
+			console.error(exception);
+		}
+	};
+
 	return (
 		<div className="landing-screen3">
 			<div className="navd">
@@ -39,7 +54,11 @@ const Products = props => {
 					{productsToShow
 						.sort((a, b) => a.name.localeCompare(b.name))
 						.map(product => (
-							<ProductCardH key={product.id} product={product} />
+							<ProductCardH
+								key={product.id}
+								product={product}
+								deleteProduct={deleteProduct}
+							/>
 						))}
 				</div>
 			</div>
