@@ -2,12 +2,38 @@ import React from "react";
 import "App.css";
 import { FaPlus, FaMinus, FaDollyFlatbed, FaTrashAlt } from "react-icons/fa";
 
-const ProductCardH = ({ product, deleteProduct }) => {
+const ProductCardH = ({ product, deleteProduct, updateProduct }) => {
 	const currentUser = JSON.parse(localStorage.getItem("loggedKwikUser"));
 
 	const removeProduct = () => {
 		const { id } = product;
 		deleteProduct(id);
+	};
+
+	const increaseQuantity = () => {
+		const { id, name, category, price } = product;
+
+		const updatedProduct = {
+			quantity: product.quantity + 1,
+			name,
+			category,
+			price,
+		};
+
+		updateProduct(id, updatedProduct);
+	};
+
+	const decreaseQuantity = () => {
+		const { id, name, category, price } = product;
+
+		const updatedProduct = {
+			quantity: product.quantity - 1,
+			name,
+			category,
+			price,
+		};
+
+		updateProduct(id, updatedProduct);
 	};
 
 	return (
@@ -31,12 +57,16 @@ const ProductCardH = ({ product, deleteProduct }) => {
 						</div>
 						<div className="hstockcontent">
 							{currentUser.role.toLowerCase() === "admin" && (
-								<button className="hplus">
+								<button
+									className="hplus"
+									onClick={increaseQuantity}>
 									<FaPlus size={20} />
 								</button>
 							)}
 							<h4>{product.quantity}</h4>
-							<button className="hminus">
+							<button
+								className="hminus"
+								onClick={decreaseQuantity}>
 								<FaMinus size={20} />
 							</button>
 							{currentUser.role.toLowerCase() === "admin" && (

@@ -16,8 +16,8 @@ const App = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 
-	const [notificationMessage, setNotificationMessage] = useState(null);
-	const [notificationType, setNotificationType] = useState(null);
+	// const [notificationMessage, setNotificationMessage] = useState(null);
+	// const [notificationType, setNotificationType] = useState(null);
 
 	useEffect(() => {
 		const loggedUserJSON = window.localStorage.getItem("loggedKwikUser");
@@ -49,12 +49,12 @@ const App = () => {
 			history.push("/dashboard");
 		} catch (exception) {
 			console.log(exception);
-			setNotificationMessage("Wrong credentials");
-			setNotificationType("error");
-			setTimeout(() => {
-				setNotificationMessage(null);
-				setNotificationType(null);
-			}, 5000);
+			// setNotificationMessage("Wrong credentials");
+			// setNotificationType("error");
+			// setTimeout(() => {
+			// 	setNotificationMessage(null);
+			// 	setNotificationType(null);
+			// }, 5000);
 		}
 	};
 

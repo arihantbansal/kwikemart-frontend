@@ -25,6 +25,28 @@ const Products = props => {
 		});
 	}, [products]);
 
+	const updateProduct = async (id, productObject) => {
+		try {
+			await productService.update(id, productObject);
+
+			const updatedProduct = {
+				...productObject,
+				id,
+			};
+
+			setProducts(
+				products.map(p => (p.id !== id ? product : updatedProduct))
+			);
+			setProductsToShow(
+				productsToShow.map(p =>
+					p.id !== id ? product : updatedProduct
+				)
+			);
+		} catch (exception) {
+			console.error(exception);
+		}
+	};
+
 	const deleteProduct = async id => {
 		try {
 			const product = products.filter(p => p.id === id);
@@ -61,6 +83,7 @@ const Products = props => {
 									key={product.id}
 									product={product}
 									deleteProduct={deleteProduct}
+									updateProduct={updateProduct}
 								/>
 							))}
 					</div>
