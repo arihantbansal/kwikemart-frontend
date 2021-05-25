@@ -42,16 +42,22 @@ const Users = props => {
 	return (
 		<div className="landing-screen3">
 			<div className="navd">
-				<Nav handleLogout={props.handleLogout} />
+				<Nav
+					handleLogout={props.handleLogout}
+					handleToggleSidebar={props.handleToggleSidebar}
+				/>
 			</div>
 			<div className="dashhome">
-				<Sidebar />
+				<Sidebar
+					handleToggleSidebar={props.handleToggleSidebar}
+					toggled={props.toggled}
+				/>
 				<div className="dash-content">
 					<div className="role">
 						User Role :{" "}
 						{role[0].toUpperCase() + role.substr(1).toLowerCase()}
 					</div>
-					<NewUser/>
+					<NewUser />
 					<div className="users">
 						{usersToShow
 							.sort((a, b) => a.name.localeCompare(b.name))

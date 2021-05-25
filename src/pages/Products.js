@@ -66,17 +66,23 @@ const Products = props => {
 	return (
 		<div className="landing-screen3">
 			<div className="navd">
-				<Nav handleLogout={props.handleLogout} />
+				<Nav
+					handleLogout={props.handleLogout}
+					handleToggleSidebar={props.handleToggleSidebar}
+				/>
 			</div>
 			<div className="dashhome">
-				<Sidebar />
+				<Sidebar
+					handleToggleSidebar={props.handleToggleSidebar}
+					toggled={props.toggled}
+				/>
 				<div className="dash-content">
 					<div className="category">
 						Category:{" "}
 						{category[0].toUpperCase() +
 							category.substr(1).toLowerCase()}
 					</div>
-					<NewProduct/>
+					<NewProduct />
 					<div className="products">
 						{productsToShow
 							.sort((a, b) => a.name.localeCompare(b.name))

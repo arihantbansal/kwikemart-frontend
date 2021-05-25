@@ -7,10 +7,16 @@ const Dashboard = props => {
 	return (
 		<div className="landing-screen3">
 			<div className="navd">
-				<Nav handleLogout={props.handleLogout} />
+				<Nav
+					handleLogout={props.handleLogout}
+					handleToggleSidebar={props.handleToggleSidebar}
+				/>
 			</div>
 			<div className="dashhome">
-				<Sidebar />
+				<Sidebar
+					handleToggleSidebar={props.handleToggleSidebar}
+					toggled={props.toggled}
+				/>
 				<div className="dash-content">{/* <Statistic /> */}</div>
 			</div>
 		</div>

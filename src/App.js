@@ -16,6 +16,16 @@ const App = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 
+	const [toggled, setToggled] = useState(false);
+
+	// const handleToggleSidebar = value => {
+	// 	setToggled(value);
+	// };
+
+	const handleToggleSidebar = () => {
+		setToggled(!toggled);
+	};
+
 	// const [notificationMessage, setNotificationMessage] = useState(null);
 	// const [notificationType, setNotificationType] = useState(null);
 
@@ -96,6 +106,8 @@ const App = () => {
 					user={user}
 					handleLogout={handleLogout}
 					component={Dashboard}
+					handleToggleSidebar={handleToggleSidebar}
+					toggled={toggled}
 				/>
 				<ProtectedRoute
 					exact
@@ -103,6 +115,8 @@ const App = () => {
 					user={user}
 					handleLogout={handleLogout}
 					component={Products}
+					handleToggleSidebar={handleToggleSidebar}
+					toggled={toggled}
 				/>
 				<ProtectedRoute
 					exact
@@ -110,6 +124,8 @@ const App = () => {
 					user={user}
 					handleLogout={handleLogout}
 					component={Users}
+					handleToggleSidebar={handleToggleSidebar}
+					toggled={toggled}
 				/>
 				<Route exact path="/unauthorized" component={Unauthorized} />
 			</Switch>
