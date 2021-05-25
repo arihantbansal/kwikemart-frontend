@@ -4,6 +4,7 @@ import ProductCardH from "components/ProductCardH";
 import Sidebar from "components/Sidebar";
 import productService from "services/products";
 import { useParams } from "react-router";
+import NewProduct from "components/NewProduct";
 
 const Products = props => {
 	const [products, setProducts] = useState([]);
@@ -75,6 +76,7 @@ const Products = props => {
 						{category[0].toUpperCase() +
 							category.substr(1).toLowerCase()}
 					</div>
+					<NewProduct/>
 					<div className="products">
 						{productsToShow
 							.sort((a, b) => a.name.localeCompare(b.name))

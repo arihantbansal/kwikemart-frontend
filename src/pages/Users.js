@@ -4,6 +4,7 @@ import Sidebar from "components/Sidebar";
 import UserCard from "components/UserCard";
 import userService from "services/users";
 import { useParams } from "react-router";
+import NewUser from "components/NewUser";
 
 const Users = props => {
 	const [users, setUsers] = useState([]);
@@ -50,6 +51,7 @@ const Users = props => {
 						User Role :{" "}
 						{role[0].toUpperCase() + role.substr(1).toLowerCase()}
 					</div>
+					<NewUser/>
 					<div className="users">
 						{usersToShow
 							.sort((a, b) => a.name.localeCompare(b.name))

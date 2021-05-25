@@ -9,9 +9,11 @@ const Nav = ({ handleLogout }) => {
 			</Link>
 
 			<ul className="nav-links">
-				<Link to="/about">
-					<li>About</li>
-				</Link>
+				<li>
+					<Link to="/about">
+					 <button>About</button>
+					</Link>
+				</li>
 				<li>
 					<button onClick={handleLogout}>Logout</button>
 				</li>

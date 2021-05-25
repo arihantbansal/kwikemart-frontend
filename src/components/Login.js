@@ -10,6 +10,7 @@ const Login = () => {
 					<h2>An</h2>
 					<h2>Inventory</h2>
 					<h2>Manager</h2>
+					
 				</div>
 
 				<div className="home-login">

@@ -10,6 +10,8 @@ const UserCard = ({ user, deleteUser }) => {
 	};
 
 	return (
+		
+	
 		<div className="ucard">
 			<i className="userimage">
 				<FaUser size={100} />
@@ -27,6 +29,7 @@ const UserCard = ({ user, deleteUser }) => {
 						.join(" ")}
 				</h5>
 			</div>
+			
 			{currentUser.role.toLowerCase() === "admin" && (
 				<button className="usercontrol" onClick={removeUser}>
 					<h4>Delete User</h4>
