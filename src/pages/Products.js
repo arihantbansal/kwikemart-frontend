@@ -24,7 +24,37 @@ const Products = props => {
 				setProductsToShow(allProducts);
 			}
 		});
-	}, [products]);
+	}, [category]);
+
+	const addProduct = async productObject => {
+		try {
+			// Check if all required fields are filled in
+			if (
+				!productObject.name ||
+				!productObject.category ||
+				!productObject.price ||
+				!productObject.quantity
+			) {
+				console.log("productObject missing fields");
+				return;
+			}
+
+			await productService.create(productObject);
+			const updatedProducts = await productService.getAll();
+			setProducts(updatedProducts);
+			if (category.toLowerCase() !== "all") {
+				setProductsToShow(
+					updatedProducts.filter(
+						p => p.category.toLowerCase() === category
+					)
+				);
+			} else {
+				setProductsToShow(updatedProducts);
+			}
+		} catch (err) {
+			console.error(err);
+		}
+	};
 
 	const updateProduct = async (id, productObject) => {
 		try {
@@ -82,8 +112,8 @@ const Products = props => {
 						{category[0].toUpperCase() +
 							category.substr(1).toLowerCase()}
 					</div>
-					<NewProduct />
 					<div className="products">
+						<NewProduct createProduct={addProduct} />
 						{productsToShow
 							.sort((a, b) => a.name.localeCompare(b.name))
 							.map(product => (

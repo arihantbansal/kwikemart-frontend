@@ -1,9 +1,9 @@
 import React from "react";
 import Nav from "components/Nav";
 import Sidebar from "components/Sidebar";
+import "Trying.css";
 
 const Dashboard = props => {
-	console.log(props);
 	return (
 		<div className="landing-screen3">
 			<div className="navd">

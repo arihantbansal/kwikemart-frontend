@@ -12,11 +12,8 @@ const LandingPage = props => {
 		<div className="landing-screen1">
 			<div className="home-content">
 				<div className="home-tagline">
-					<h2>Hire</h2>
-					<h2>An</h2>
-					<h2>Online</h2>
-					<h2>Inventory</h2>
-					<h2>Manager</h2>
+					<h1>Kwik-E-Mart</h1>
+					<h3>Inventory Manager</h3>
 				</div>
 
 				<div className="home-login">

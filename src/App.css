@@ -18,13 +18,13 @@ body {
 	text-align: center;
 	font-family: "Exo", sans-serif;
 	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 .navbar {
 	display: flex;
 	align-items: center;
 	position: fixed;
-
 	width: 100%;
 	height: 10vh;
 	justify-content: space-between;
@@ -55,11 +55,10 @@ body {
 	align-items: center;
 	list-style: none;
 	font-size: 1.3rem;
-	
 }
 .nav-links button {
 	min-width: 3rem;
-	
+
 	padding: 3px 5px;
 	margin: 10px;
 	color: #fff;
@@ -91,6 +90,7 @@ body {
 .landing-screen1 {
 	width: 100vw;
 	box-sizing: border-box;
+	overflow-x: hidden;
 }
 
 .home-content {
@@ -101,6 +101,27 @@ body {
 	align-content: center;
 	width: 100vw;
 	height: 92vh;
+}
+
+.home-tagline {
+	font-family: "Roboto Slab", serif;
+	text-align: left;
+	margin-top: 90px;
+	line-height: 15px;
+	padding-left: 3rem;
+	color: #000000;
+}
+
+.home-tagline h1 {
+	font-family: "Roboto Slab", serif;
+	font-size: 4em;
+	line-height: 20px;
+}
+
+.home-tagline h3 {
+	font-size: 1.4em;
+	font-family: "Roboto Slab", serif;
+	font-weight: 400;
 }
 
 @media only screen and (max-width: 870px) {
@@ -116,45 +137,25 @@ body {
 		text-align: center;
 		width: 100%;
 	}
-	.explorebtn {
-		display: none;
+	.home-tagline h1 {
+		font-size: 3rem;
+	}
+
+	.home-tagline h3 {
+		font-size: 1.5rem;
 	}
 	.home-login {
 		margin: 10px 20px;
-		margin-right: 20px;
+		margin-left: 20px;
 		width: 100%;
 	}
-	.exploredown {
-		display: none;
-	}
-}
-
-.home-tagline {
-	font-family: "Roboto Slab", serif;
-	text-align: left;
-	margin-top: 90px;
-	line-height: 15px;
-	padding-left: 3rem;
-	color: #000000;
-}
-
-.home-tagline h2 {
-	font-family: "Roboto Slab", serif;
-	font-size: 4em;
-	line-height: 20px;
-}
-
-.home-tagline h3 {
-	font-size: 1.4em;
-	font-family: "Roboto Slab", serif;
-	font-weight: 300;
 }
 
 .home-login {
 	margin-right: 20%;
 	padding: 50px 40px;
 	border: 2px solid #000;
-
+	border-radius: 20px;
 	background-color: rgba(0, 0, 0, 0.125);
 	width: 250px;
 	min-width: min-content;
@@ -164,7 +165,7 @@ body {
 .home-login h3 {
 	margin-bottom: 10%;
 	background-color: rgba(0, 136, 255, 0);
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	color: #000;
 }
 
@@ -175,16 +176,17 @@ body {
 
 .login-input {
 	text-align: center;
+	color: black;
 }
 
 .login-form input {
 	margin-bottom: 5px;
 	background-color: rgba(0, 0, 0, 0);
 	border-bottom: 2px #000 solid;
-
+	border-radius: 10px;
 	font-size: 1em;
 	outline: none;
-	color: white;
+	text-indent: 4px;
 }
 
 .login-form input:hover {
@@ -205,12 +207,12 @@ body {
 	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
+	border-radius: 15px;
 }
 
-.login-btn button:hover {
-	background-color: #fff;
-
-	color: #000;
+.login-form button:hover {
+	background-color: #fff !important;
+	color: #000 !important;
 }
 
 /************************/
@@ -366,18 +368,21 @@ body {
 	background-color: #fff;
 	width: calc(100vw - 300px);
 	margin-left: 300px;
-	margin-top: 10px;
+	/* margin-top: 10px; */
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: calc(100% - 10vh);
 }
+
 @media only screen and (max-width: 768px) {
-	.dash-content{
+	.dash-content {
 		margin-left: 0;
 		width: 100%;
 	}
-	.restcardcontent{
+	.restcardcontent {
 		display: flex;
 		flex-direction: column;
 	}
-	
 }
 
 .dash-content .category,
@@ -465,11 +470,13 @@ body {
 	text-align: left;
 	padding-left: 5px;
 }
-@media only screen and (max-width: 768px){
-	.hcard{
-		width:100%;
+
+@media only screen and (max-width: 768px) {
+	.hcard {
+		width: 100%;
 	}
 }
+
 .restcardcontent {
 	background-color: white;
 	color: gray;
@@ -514,7 +521,7 @@ body {
 	flex-direction: row;
 	width: 100%;
 	height: 25%;
-	
+
 	align-content: center;
 	padding: 10px 0;
 	background-color: gray;
@@ -597,7 +604,6 @@ body {
 	width: max-content;
 	height: max-content;
 	background-color: #101;
-	/* TODO: Change Me! */
 	border-radius: 30px;
 	font-family: monospace;
 }
@@ -645,17 +651,19 @@ body {
 	border: 2px solid black;
 	padding: 2px 6px;
 }
+
 .newp * {
 	margin: 2px 0;
-
 	width: max-content;
 	width: 100%;
 	font-size: 1.05em;
 }
+
 .productname {
 	font-size: 1.2em;
 	font-weight: 700;
 }
+
 .newpButton {
 	padding: 0 0;
 	margin: 5px 0;
@@ -675,13 +683,14 @@ body {
 	border: 2px solid black;
 	padding: 2px 6px;
 }
+
 .newu * {
 	margin: 2px 0;
-
 	width: max-content;
 	width: 100%;
 	font-size: 1.05em;
 }
+
 .username {
 	font-size: 1.2em;
 	font-weight: 700;
@@ -713,5 +722,14 @@ body {
 @media (max-width: 768px) {
 	.btn-toggle {
 		display: flex;
+	}
+
+	.person {
+		margin-top: 10px;
+	}
+
+	.home-content {
+		height: 91vh;
+		overflow-y: scroll;
 	}
 }

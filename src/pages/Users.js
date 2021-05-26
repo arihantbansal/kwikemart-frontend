@@ -22,7 +22,35 @@ const Users = props => {
 				setUsersToShow(allUsers);
 			}
 		});
-	}, [users]);
+	}, [role]);
+
+	const addUser = async userObject => {
+		try {
+			// Check if all required fields are filled in
+			if (
+				!userObject.name ||
+				!userObject.username ||
+				!userObject.password ||
+				!userObject.role
+			) {
+				console.log("userObject missing fields");
+				return;
+			}
+
+			await userService.create(userObject);
+			const updatedUsers = await userService.getAll();
+			setUsers(updatedUsers);
+			if (role.toLowerCase() !== "all") {
+				setUsersToShow(
+					updatedUsers.filter(u => u.role.toLowerCase() === role)
+				);
+			} else {
+				setUsersToShow(updatedUsers);
+			}
+		} catch (err) {
+			console.error(err);
+		}
+	};
 
 	const deleteUser = async id => {
 		try {
@@ -57,8 +85,8 @@ const Users = props => {
 						User Role :{" "}
 						{role[0].toUpperCase() + role.substr(1).toLowerCase()}
 					</div>
-					<NewUser />
 					<div className="users">
+						<NewUser createUser={addUser} />
 						{usersToShow
 							.sort((a, b) => a.name.localeCompare(b.name))
 							.map(user => (

@@ -18,14 +18,11 @@ const App = () => {
 
 	const [toggled, setToggled] = useState(false);
 
-	// const handleToggleSidebar = value => {
-	// 	setToggled(value);
-	// };
-
 	const handleToggleSidebar = () => {
 		setToggled(!toggled);
 	};
 
+	// Notification messages to be added later. It's crashing the UI right now.
 	// const [notificationMessage, setNotificationMessage] = useState(null);
 	// const [notificationType, setNotificationType] = useState(null);
 
@@ -128,6 +125,7 @@ const App = () => {
 					toggled={toggled}
 				/>
 				<Route exact path="/unauthorized" component={Unauthorized} />
+				{/* <Route path="*" component={NotFound} /> */}
 			</Switch>
 		</div>
 	);
