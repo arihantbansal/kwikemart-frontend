@@ -81,7 +81,7 @@ const AboutUs = () => {
 						style={{ width: "15rem" }}>
 						<Card.Img
 							variant="top"
-							src="/logo192.png"
+							src="/medha.png"
 							width="200"
 							height="200"
 							style={{ borderRadius: "50%" }}
