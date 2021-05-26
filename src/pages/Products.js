@@ -113,7 +113,9 @@ const Products = props => {
 							category.substr(1).toLowerCase()}
 					</div>
 					<div className="products">
-						<NewProduct createProduct={addProduct} />
+						{currentUser.role.toLowerCase() === "admin" && (
+							<NewProduct createProduct={addProduct} />
+						)}
 						{productsToShow
 							.sort((a, b) => a.name.localeCompare(b.name))
 							.map(product => (

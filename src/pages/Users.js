@@ -86,7 +86,9 @@ const Users = props => {
 						{role[0].toUpperCase() + role.substr(1).toLowerCase()}
 					</div>
 					<div className="users">
-						<NewUser createUser={addUser} />
+						{currentUser.role.toLowerCase() === "admin" && (
+							<NewUser createUser={addUser} />
+						)}
 						{usersToShow
 							.sort((a, b) => a.name.localeCompare(b.name))
 							.map(user => (
