@@ -3,7 +3,7 @@ import Nav from "components/Nav";
 import ProductCardH from "components/ProductCardH";
 import Sidebar from "components/Sidebar";
 import productService from "services/products";
-import { useParams } from "react-router";
+import { Redirect, useParams } from "react-router";
 import NewProduct from "components/NewProduct";
 
 const Products = props => {

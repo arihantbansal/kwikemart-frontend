@@ -9,6 +9,8 @@ body {
 	padding: 0;
 	background-color: white;
 	color: #000000;
+	overflow-y: auto !important;
+	overflow-x: hidden;
 }
 
 * {
@@ -19,7 +21,8 @@ body {
 	text-align: center;
 	font-family: "Exo", sans-serif;
 	overflow-x: hidden;
-	overflow-y: scroll;
+	height: 100% !important;
+	position: absolute;
 }
 
 .navbar {
@@ -742,4 +745,11 @@ body {
 .about-content {
 	margin-top: 10vh;
 	height: calc(100% - 10vh);
+}
+
+.stats-card {
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 20px;
+	box-shadow: 10px 10px 2px 0px rgba(0, 0, 0, 0.25);
 }

@@ -5,21 +5,7 @@ const AboutUs = () => {
 	return (
 		<div className="abtus" id="about">
 			<h2>About Us</h2>
-			<p>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam,
-				nostrum dolores! Aut officia a laboriosam nam odit cupiditate
-				veritatis odio eos incidunt mollitia assumenda necessitatibus
-				fugiat, doloremque dicta, obcaecati sed? Explicabo quasi
-				corrupti ad aliquid architecto recusandae inventore, nam magni
-				vero dolore libero, illo odio, blanditiis dicta maxime
-				accusantium illum deserunt. Sit reprehenderit temporibus odio
-				earum pariatur harum nihil ullam? Optio, explicabo. Atque, id,
-				adipisci ipsa animi voluptatem error praesentium, quaerat minus
-				eum minima iure temporibus odit officia illo deserunt quae nam
-				earum. Ratione consectetur eveniet facilis at, iste pariatur. F
-				facere, officiis exercitationem, minima necessitatibus
-				accusantium nihil molestias quibusdam magni!
-			</p>
+			<p>Welcome to Kwik-E-Mart's inventory management system.</p>
 			<div className="ourImage">
 				<div>
 					<Card
@@ -27,9 +13,10 @@ const AboutUs = () => {
 						style={{ width: "15rem" }}>
 						<Card.Img
 							variant="top"
-							src="/logo192.png"
+							src="/arihant.jpg"
 							width="200"
 							height="200"
+							style={{ borderRadius: "50%" }}
 						/>
 						<Card.Body>
 							<Card.Title>Arihant Bansal</Card.Title>
@@ -39,12 +26,16 @@ const AboutUs = () => {
 								DevSoc, BITS Goa
 							</Card.Text>
 							<i className="footer-icons">
-								<a href="" target="_blank">
+								<a
+									href="https://github.com/arihantbansal"
+									target="_blank">
 									<FaGithub size={25} />
 								</a>
 							</i>
 							<i className="footer-icons">
-								<a href="" target="_blank">
+								<a
+									href="https://www.linkedin.com/in/arihantbansal/"
+									target="_blank">
 									<FaLinkedinIn size={25} />
 								</a>
 							</i>
@@ -57,9 +48,10 @@ const AboutUs = () => {
 						style={{ width: "15rem" }}>
 						<Card.Img
 							variant="top"
-							src="/logo192.png"
+							src="/ayush.jpg"
 							width="200"
 							height="200"
+							style={{ borderRadius: "50%" }}
 						/>
 						<Card.Body>
 							<Card.Title>Ayush Pal</Card.Title>
@@ -74,7 +66,9 @@ const AboutUs = () => {
 								</a>
 							</i>
 							<i className="footer-icons">
-								<a href="" target="_blank">
+								<a
+									href="https://www.linkedin.com/in/ayush-pal-300b731b9/"
+									target="_blank">
 									<FaLinkedinIn size={25} />
 								</a>
 							</i>
@@ -90,6 +84,7 @@ const AboutUs = () => {
 							src="/logo192.png"
 							width="200"
 							height="200"
+							style={{ borderRadius: "50%" }}
 						/>
 						<Card.Body>
 							<Card.Title>Medha R S</Card.Title>
@@ -99,12 +94,16 @@ const AboutUs = () => {
 								DevSoc, BITS Goa
 							</Card.Text>
 							<i className="footer-icons">
-								<a href="" target="_blank">
+								<a
+									href="https://github.com/meeddhhaa"
+									target="_blank">
 									<FaGithub size={25} />
 								</a>
 							</i>
 							<i className="footer-icons">
-								<a href="" target="_blank">
+								<a
+									href="https://www.linkedin.com/in/medha-rs/"
+									target="_blank">
 									<FaLinkedinIn size={25} />
 								</a>
 							</i>
