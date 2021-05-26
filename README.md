@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Kwik-E-Mart Inventory Manager Front-end
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+We, at Kwik-E-Mart, always keep our system up-to-date with our inventory stock using our proprietary inventory management software.
+The front-end is built with React and uses React Router for declarative routing. 
 
-## Available Scripts
+## How to use
 
-In the project directory, you can run:
+Login on the homepage using admin, cashier or staff credentials (given below). The Dashboard shows the statistics of the inventory and the app. Using the sidebar menu, users can view the products, filtered by category. Similarly, one can view the list of the users authorized to use the application. Admins can add or delete users, and products, as well as, increase/decrease item stock. Cashiers can decrease stock whereas Staff can only view.
 
-### `npm start`
+[Kwik-E-Mart Inventory Manager](https://kwik-e-mart-inventory.herokuapp.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Login Credentials
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Role: Admin
+Username: admin
+Password: admin
 
-### `npm test`
+Role: Cashier
+Username: cashier
+Password: cashier
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Role: Staff
+Username: staff
+Password: staff
 
-### `npm run build`
+## Future Implementation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In the future we plan to:
+* Use Next.js for SSR
+* Add more product categories
+* Improve upon the UI/UX
+* Improve upon the responsive design
+* Improve security measures
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Team members
+### Frontend team
+* [Ayush Pal](https://github.com/palayush16)
+* [Medha RS](https://github.com/meeddhhaa)
+### Backend team
+* [Arihant Bansal](https://github.com/arihantbansal/))
