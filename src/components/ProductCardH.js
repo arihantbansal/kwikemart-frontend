@@ -64,11 +64,13 @@ const ProductCardH = ({ product, deleteProduct, updateProduct }) => {
 								</button>
 							)}
 							<h4>{product.quantity}</h4>
-							<button
-								className="hminus"
-								onClick={decreaseQuantity}>
-								<FaMinus size={20} />
-							</button>
+							{currentUser.role.toLowerCase() !== "staff" && (
+								<button
+									className="hminus"
+									onClick={decreaseQuantity}>
+									<FaMinus size={20} />
+								</button>
+							)}
 							{currentUser.role.toLowerCase() === "admin" && (
 								<button
 									className="hTrash"
