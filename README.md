@@ -35,6 +35,11 @@ In the future we plan to:
 ## Team members
 ### Frontend team
 * [Ayush Pal](https://github.com/palayush16)
+	* Worked on creating the UI of the app
+	* Created components and designed them using custom CSS and React Bootstrap
 * [Medha RS](https://github.com/meeddhhaa)
+	* Worked on creating mock design for the app
 ### Backend team
 * [Arihant Bansal](https://github.com/arihantbansal/)
+	* Built the backend API
+	* Also helped add the functionality to the front-end UI and integrate React app with the backend
