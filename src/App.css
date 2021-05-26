@@ -744,7 +744,8 @@ body {
 
 .about-content {
 	margin-top: 10vh;
-	height: calc(100% - 10vh);
+	height: 100vh !important;
+	width: 100vw !important;
 }
 
 .stats-card {
