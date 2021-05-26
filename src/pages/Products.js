@@ -10,6 +10,7 @@ const Products = props => {
 	const [products, setProducts] = useState([]);
 	const [productsToShow, setProductsToShow] = useState(products);
 	const { category } = useParams();
+	const currentUser = JSON.parse(localStorage.getItem("loggedKwikUser"));
 
 	useEffect(() => {
 		productService.getAll().then(allProducts => {

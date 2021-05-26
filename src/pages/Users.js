@@ -10,6 +10,7 @@ const Users = props => {
 	const [users, setUsers] = useState([]);
 	const [usersToShow, setUsersToShow] = useState(users);
 	const { role } = useParams();
+	const currentUser = JSON.parse(localStorage.getItem("loggedKwikUser"));
 
 	useEffect(() => {
 		userService.getAll().then(allUsers => {
