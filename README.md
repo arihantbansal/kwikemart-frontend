@@ -37,4 +37,4 @@ In the future we plan to:
 * [Ayush Pal](https://github.com/palayush16)
 * [Medha RS](https://github.com/meeddhhaa)
 ### Backend team
-* [Arihant Bansal](https://github.com/arihantbansal/))
+* [Arihant Bansal](https://github.com/arihantbansal/)
