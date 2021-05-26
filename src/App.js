@@ -10,6 +10,8 @@ import loginService from "services/login";
 import productService from "services/products";
 import userService from "services/users";
 import { Switch, Route, useHistory } from "react-router-dom";
+import About from "pages/About";
+import NotFound from "pages/NotFound";
 
 const App = () => {
 	const [user, setUser] = useState(null);
@@ -124,8 +126,15 @@ const App = () => {
 					handleToggleSidebar={handleToggleSidebar}
 					toggled={toggled}
 				/>
+				<Route
+					exact
+					path="/about"
+					component={About}
+					handleToggleSidebar={handleToggleSidebar}
+					handleLogout={handleLogout}
+				/>
 				<Route exact path="/unauthorized" component={Unauthorized} />
-				{/* <Route path="*" component={NotFound} /> */}
+				<Route path="*" component={NotFound} />
 			</Switch>
 		</div>
 	);

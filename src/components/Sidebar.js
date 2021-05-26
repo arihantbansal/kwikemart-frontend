@@ -14,7 +14,7 @@ const Sidebar = props => {
 					<MenuItem>
 						<Link to="/dashboard">Dashboard</Link>
 					</MenuItem>
-					<SubMenu title="Categories">
+					<SubMenu title="Products">
 						<MenuItem>
 							<Link to="/products/all">All</Link>
 						</MenuItem>

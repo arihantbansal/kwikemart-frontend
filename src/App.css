@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@500&family=Goblin+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;700&display=swap");
+
 body {
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;
@@ -33,6 +34,7 @@ body {
 	list-style: none;
 	text-decoration: none;
 	color: #fff;
+	padding-right: 20px;
 }
 
 .navbar a {
@@ -368,7 +370,7 @@ body {
 	background-color: #fff;
 	width: calc(100vw - 300px);
 	margin-left: 300px;
-	/* margin-top: 10px; */
+	margin-top: 10vh;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	height: calc(100% - 10vh);
@@ -708,7 +710,6 @@ body {
 	cursor: pointer;
 	width: 35px;
 	height: 35px;
-	background: #353535;
 	color: #fff;
 	text-align: center;
 	border-radius: 50%;
@@ -732,4 +733,13 @@ body {
 		height: 91vh;
 		overflow-y: scroll;
 	}
+
+	.navbar h3 {
+		font-size: 1rem;
+	}
+}
+
+.about-content {
+	margin-top: 10vh;
+	height: calc(100% - 10vh);
 }
