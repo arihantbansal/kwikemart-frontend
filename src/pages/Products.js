@@ -35,7 +35,7 @@ const Products = props => {
 				!productObject.price ||
 				!productObject.quantity
 			) {
-				console.log("productObject missing fields");
+				console.error("productObject missing fields");
 				return;
 			}
 

@@ -27,14 +27,13 @@ const Users = props => {
 	const addUser = async userObject => {
 		try {
 			// Check if all required fields are filled in
-			console.log(userObject);
 			if (
 				!userObject.name ||
 				!userObject.username ||
 				!userObject.password ||
 				!userObject.role
 			) {
-				console.log("userObject missing fields");
+				console.error("userObject missing fields");
 				return;
 			}
 
